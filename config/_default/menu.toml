@@ -15,6 +15,11 @@ url = "https://github.com/killparty"
 [social.params]
 icon = "brand-github"
 
+[[social]]
+identifier = "website"
+name = "My website"
+url = "https://davidd.eu"
+
 #[[social]]
 #identifier = "twitter"
 #name = "Twitter"
