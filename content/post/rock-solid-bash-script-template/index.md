@@ -2,7 +2,6 @@
 title: Bash Boilerplate
 description: Rock-solid bash script template for easy scripting
 date: 2024-10-23 17:02:00+0000
-draft: true
 ---
 
 Writing reliable Bash scripts can be tricky, but having a solid starting point helps. Below is a Bash boilerplate that I often use to make scripts safer and easier to manage.
