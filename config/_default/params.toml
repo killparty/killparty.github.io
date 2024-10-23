@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "/favicon.png"
+favicon = "/favicon.ico"
 
 [footer]
 since = 2020
@@ -31,26 +31,26 @@ enabled = true
 default = "Licensed under CC BY-NC-SA 4.0"
 
 ## Widgets
-[[widgets.homepage]]
-type = "search"
+#[[widgets.homepage]]
+#type = "search"
 
-[[widgets.homepage]]
-type = "archives"
+#[[widgets.homepage]]
+#type = "archives"
 
-[widgets.homepage.params]
-limit = 5
+#[widgets.homepage.params]
+#limit = 5
 
-[[widgets.homepage]]
-type = "categories"
+#[[widgets.homepage]]
+#type = "categories"
 
-[widgets.homepage.params]
-limit = 10
+#[widgets.homepage.params]
+#limit = 10
 
-[[widgets.homepage]]
-type = "tag-cloud"
+#[[widgets.homepage]]
+#ype = "tag-cloud"
 
-[widgets.homepage.params]
-limit = 10
+#[widgets.homepage.params]
+#limit = 10
 
 [[widgets.page]]
 type = "toc"
