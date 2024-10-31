@@ -1,14 +1,22 @@
 ---
 title: Bash Boilerplate
 description: Rock-solid bash script template for easy scripting
-date: 2024-10-23 17:02:00+0000
+date: 2024-10-31 08:40:00+0000
+toc: false
 ---
 
 Writing reliable Bash scripts can be tricky, but having a solid starting point helps. Below is a Bash boilerplate that I often use to make scripts safer and easier to manage.
 
 It includes strict error handling (`set -euo pipefail`) to catch mistakes early, log rotation to keep log files from getting too big, and a lockfile to prevent multiple script instances from running at the same time. There’s also a section for checking dependencies and handling cleanups.
 
-Feel free to use this template as a foundation for your own scripts and tweak it to fit your needs!
+### Customization:
+
+- Modify the `main` function to include the actual logic of your script.
+- Add or remove dependencies as needed in the `check_dependencies` function.
+- Adjust paths for the `LOCKFILE` and `LOGFILE` as per your requirements.
+- Remove the root check in case it is not required.
+
+This template ensures your script adheres to good security and reliability standards, minimizing the risk of common pitfalls in bash scripting.
 
 ```sh=
 #!/bin/bash
@@ -121,3 +129,39 @@ check_dependencies
 main
 cleanup
 ```
+
+### Explanation and Best Practices:
+
+1. **Strict Mode**:
+    
+    - `set -euo pipefail`:
+        - `-e`: Exit immediately if a command exits with a non-zero status.
+        - `-u`: Treat unset variables as an error.
+        - `-o pipefail`: Ensures that if any part of a pipe fails, the entire pipeline fails.
+    - `IFS=$'\n\t'`: Ensures that word splitting is done only on newlines and tabs, preventing security issues with spaces.
+2. **Lockfile Mechanism**:
+    
+    - The script uses a lockfile (`/tmp/${SCRIPT_NAME}.lock`) to ensure only one instance runs at a time.
+    - If the script is already running (lockfile exists), it exits to avoid multiple instances.
+3. **Logging**:
+    
+    - `log()` function logs messages with a timestamp, log level (`INFO`, `ERROR`, etc.), and appends them to a log file (`/var/log/${SCRIPT_NAME}.log`).
+    - Log entries are echoed to both the terminal and log file.
+4. **Signal Trapping and Cleanup**:
+    
+    - `trap 'cleanup; exit' INT TERM EXIT`: This ensures the lockfile is removed if the script exits unexpectedly (e.g., via `Ctrl+C` or system signals).
+    - Cleanup function removes the lockfile, avoiding stale lockfiles.
+5. **Root Check**:
+    
+    - If the script requires root privileges, this check prevents it from running as a non-root user.
+6. **Secure PATH**:
+    
+    - The script explicitly sets the `PATH` to a known secure set of directories, avoiding potential execution of malicious commands from user-controlled locations.
+7. **Dependency Checks**:
+    
+    - The `check_dependencies` function ensures that all required commands (`command1`, `command2`, etc.) are available before the script proceeds. You can replace these with actual dependencies.
+8. **Error Handling**:
+    
+    - The `error_handler` function is triggered on any error (via the `ERR` trap), providing useful information about where the error occurred and what the exit code was.
+
+Feel free to use this template as a foundation for your own scripts and tweak it to fit your needs!
