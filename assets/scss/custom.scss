@@ -1,3 +1,11 @@
 /*
     You can add your own custom styles here.
 */
+
+:root {
+
+    &[data-scheme="dark"] {
+        --body-background: #0e0e0b;
+        --card-background: #1a1a1a;
+    }
+}
