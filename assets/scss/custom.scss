@@ -3,9 +3,19 @@
 */
 
 :root {
+    --base-font-family: "Fira Sans", "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
+
+    --article-font-size: 1.9rem;
+    --article-line-height: 1.5;
 
     &[data-scheme="dark"] {
-        --body-background: #0e0e0b;
-        --card-background: #1a1a1a;
+        --body-background: #202020;
+        --card-background: #121212;
     }
 }
+
+/*
+.article-content {
+    font-weight: 300;
+}
+*/
