@@ -1,22 +1,14 @@
 ---
 title: Setting Up Debian as a Gateway Router
 description: Turn Debian into a basic router for traffic analysis, NAT, etc.
-date: 2024-11-17 17:24:00+0000
+date: 2024-11-30 15:15:00+0000
 draft: false
-toc: false
+toc: true
 ---
 
 Turning Debian into a network router involves configuring the system to forward IP packets between network interfaces and applying appropriate IP routing rules. This step-by-step guide walks you through the setup on a Debian 12 VM.
 
-### Summary
-
-1. **Start with foundational functionality (IP forwarding)**
-2. **Set up essential connectivity (network interfaces)**
-3. **Optional: Set up NAT**
-4. **Optional: Configure routing rules**
-5. **Optional: Install a DHCP server**
-
-### **Prerequisites**
+**Prerequisites:**
 
 Make sure your VM has at least two network interfaces:
 
@@ -29,7 +21,7 @@ You can check your network interfaces with:
 ip a
 ```
 
-### 1. **Enable IP Forwarding**
+## **Enable IP Forwarding**
 
 1. Edit the sysctl configuration to enable IP forwarding permanently:
 
@@ -53,7 +45,7 @@ cat /proc/sys/net/ipv4/ip_forward
 
 It should return `1`.
 
-### 2. Configuring Network Interfaces with `systemd-networkd`
+## **Configure Network Interfaces with `systemd-networkd`**
 
 1. **Verify that `systemd-networkd` is active**
 
@@ -111,7 +103,7 @@ networkctl status
 
 You should see both interfaces correctly configured.
 
-### 3. **Optional: Set Up NAT**
+## **Set Up NAT (optional)**
 
 To allow machines on the internal network to access external networks through the router, configure Network Address Translation (NAT) using  `nftables`.
 
@@ -139,7 +131,7 @@ table ip nat {
 sudo nft -f /etc/nftables.conf
 ```
 
-### 4. **Optional: Configure Routing Rules**
+## **Configure Routing Rules (optional)**
 
 Add any required static routes using `ip route` commands:
 
@@ -153,7 +145,7 @@ Example:
 sudo ip route add 192.168.2.0/24 via 192.168.1.1 dev eth1
 ```
 
-### 5. **Optional: Install a DHCP Server**
+## **Install a DHCP Server (optional)**
 
 To dynamically assign IPs to devices on the internal network, install and configure a DHCP server. In case of turning a Debian VM into a basic router, `dnsmasq` is a practical, efficient choice.
 
