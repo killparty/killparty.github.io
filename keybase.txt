@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/killparty
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://killparty.github.io
+  * I am killparty (https://keybase.io/killparty) on keybase.
+  * I have a public key ASD2028Dt6NFzGwVOuQSK9QrLXrTmDqOgwBx3PUJQvhm2Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f6d36f03b7a345cc6c153ae4122bd42b2d7ad3983a8e830071dcf50942f866d80a",
+      "host": "keybase.io",
+      "kid": "0120f6d36f03b7a345cc6c153ae4122bd42b2d7ad3983a8e830071dcf50942f866d80a",
+      "uid": "32824c45664b03931aa3e63a2b829119",
+      "username": "killparty"
+    },
+    "merkle_root": {
+      "ctime": 1731916914,
+      "hash": "c28f31c5e50ad61f9dcfde9dd6c8950b79ccc7ee608f2af65ed5798efe56a2b1a776def56a009b17d380995bcbed9cf6286bf67ef7c24bae919abbb1678673f7",
+      "hash_meta": "f47f364cc5960dc2518f39e7d5a5501dc39bca4fedd7f9dbaf8d8860bfe53f6d",
+      "seqno": 26305940
+    },
+    "service": {
+      "entropy": "BrN9AiYTNqewhWP9GzWzoE06",
+      "hostname": "killparty.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.2"
+  },
+  "ctime": 1731916980,
+  "expire_in": 504576000,
+  "prev": "18b99b6d61cdac49ae6e787776dc9068e6f073e5b987abc83554f212b0c5b1dc",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9tNvA7ejRcxsFTrkEivUKy1605g6joMAcdz1CUL4ZtgKp3BheWxvYWTESpcCB8QgGLmbbWHNrEmubnh3dtyQaObwc+W5h6vINVTyErDFsdzEIJ7yMCpeOLY3DQA3J9oyrxPWTcsGxH8O17STQMagBBdRAgHCo3NpZ8RAw1QvT73C9ZKPTDouXBDP2TxF6Zgb+yEz2iuiVkd0th8RQP8fTie2dKMGMZursWiTWwJujEGhaKvipbFTdv5YB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJLZGqyXO5/E9mpQZ7sPtTmJtqgZGKUxFUmbM4/hTcG7o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/killparty
+
+==================================================================
