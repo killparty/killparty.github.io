@@ -1,6 +1,6 @@
 ---
 title: Bash Boilerplate
-description: Rock-solid bash script template for easy scripting
+description: Bash script template for easy scripting
 date: 2024-10-23 17:02:00+0000
 toc: false
 ---
