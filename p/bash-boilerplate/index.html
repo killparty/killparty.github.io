@@ -1,0 +1,476 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Bash script template for easy scripting"><title>Bash Boilerplate</title><link rel=canonical href=https://killparty.github.io/p/bash-boilerplate/><link rel=stylesheet href=/scss/style.min.472a076eb51027a918a1a6ef7061e600092576fdcee2843c6fe3f5125a8f72c5.css><meta property='og:title' content="Bash Boilerplate"><meta property='og:description' content="Bash script template for easy scripting"><meta property='og:url' content='https://killparty.github.io/p/bash-boilerplate/'><meta property='og:site_name' content='killp@rty:~# kill $PID'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2024-10-23T17:02:00+00:00'><meta property='article:modified_time' content='2024-10-23T17:02:00+00:00'><meta name=twitter:title content="Bash Boilerplate"><meta name=twitter:description content="Bash script template for easy scripting"><link rel="shortcut icon" href=/favicon.ico><style>:root{--article-font-family:"Fira Sans", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_ad3af23ca3eb995e.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>killp@rty:~# kill $PID</a></h1><h2 class=site-description>Code-blooded threat hunter</h2></div></header><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/bash-boilerplate/>Bash Boilerplate</a></h2><h3 class=article-subtitle>Bash script template for easy scripting</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 23, 2024</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>6 minute read</time></div></footer></div></header><section class=article-content><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/bash
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=c1># Bash Script Boilerplate</span>
+</span></span><span class=line><span class=cl><span class=c1># ========================</span>
+</span></span><span class=line><span class=cl><span class=c1># A production-ready bash script template with:</span>
+</span></span><span class=line><span class=cl><span class=c1>#   - Error handling and strict mode</span>
+</span></span><span class=line><span class=cl><span class=c1>#   - Logging (optional, disabled by default)</span>
+</span></span><span class=line><span class=cl><span class=c1>#   - Lockfile mechanism (prevents multiple instances)</span>
+</span></span><span class=line><span class=cl><span class=c1>#   - Automatic cleanup on exit</span>
+</span></span><span class=line><span class=cl><span class=c1>#   - Log rotation</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=c1># Quick Start:</span>
+</span></span><span class=line><span class=cl><span class=c1>#   1. Copy this file to your script name</span>
+</span></span><span class=line><span class=cl><span class=c1>#   2. Add your logic in the main() function</span>
+</span></span><span class=line><span class=cl><span class=c1>#   3. Uncomment and customize features as needed:</span>
+</span></span><span class=line><span class=cl><span class=c1>#      - Enable logging: change ENABLE_LOGGING to &#34;true&#34; below</span>
+</span></span><span class=line><span class=cl><span class=c1>#      - Add dependencies: uncomment and modify check_dependencies()</span>
+</span></span><span class=line><span class=cl><span class=c1>#      - Require root: uncomment the root check section</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl><span class=c1># Usage examples:</span>
+</span></span><span class=line><span class=cl><span class=c1>#   ./script.sh                          # Run with logging disabled</span>
+</span></span><span class=line><span class=cl><span class=c1>#   ENABLE_LOGGING=true ./script.sh      # Enable logging via env var</span>
+</span></span><span class=line><span class=cl><span class=c1>#   LOG_DIR=/var/log ./script.sh         # Enable logging to specific directory</span>
+</span></span><span class=line><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Configuration</span>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Secure PATH</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>PATH</span><span class=o>=</span><span class=s1>&#39;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Strict mode (exits on error, undefined variables, pipe failures)</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> -euo pipefail
+</span></span><span class=line><span class=cl><span class=nv>IFS</span><span class=o>=</span><span class=s1>$&#39;\n\t&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Script metadata</span>
+</span></span><span class=line><span class=cl><span class=nv>SCRIPT_NAME</span><span class=o>=</span><span class=s2>&#34;</span><span class=k>$(</span>basename <span class=s2>&#34;</span><span class=nv>$0</span><span class=s2>&#34;</span><span class=k>)</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>PID</span><span class=o>=</span><span class=nv>$$</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Lockfile location (prevents multiple instances)</span>
+</span></span><span class=line><span class=cl><span class=nv>LOCKFILE</span><span class=o>=</span><span class=s2>&#34;/tmp/</span><span class=si>${</span><span class=nv>SCRIPT_NAME</span><span class=si>}</span><span class=s2>.lock&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Logging Configuration</span>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Enable logging: set to &#34;true&#34; to enable file logging, or keep &#34;false&#34; for console-only</span>
+</span></span><span class=line><span class=cl><span class=c1># You can also enable via environment: ENABLE_LOGGING=true ./script.sh</span>
+</span></span><span class=line><span class=cl><span class=nv>ENABLE_LOGGING</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>ENABLE_LOGGING</span><span class=k>:-</span><span class=nv>false</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Log directory configuration</span>
+</span></span><span class=line><span class=cl><span class=c1># - If LOG_DIR env var is set, logging is automatically enabled</span>
+</span></span><span class=line><span class=cl><span class=c1># - Default: ~/.local/log (falls back to /tmp if HOME is not available)</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[[</span> -n <span class=s2>&#34;</span><span class=si>${</span><span class=nv>LOG_DIR</span><span class=k>:-</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nv>ENABLE_LOGGING</span><span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=o>[[</span> -n <span class=s2>&#34;</span><span class=si>${</span><span class=nv>HOME</span><span class=k>:-</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=o>[[</span> -d <span class=s2>&#34;</span><span class=si>${</span><span class=nv>HOME</span><span class=k>:-</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    <span class=nv>LOG_DIR</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>HOME</span><span class=si>}</span><span class=s2>/.local/log&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=nv>LOG_DIR</span><span class=o>=</span><span class=s2>&#34;/tmp&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>LOGFILE</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>LOG_DIR</span><span class=si>}</span><span class=s2>/</span><span class=si>${</span><span class=nv>SCRIPT_NAME</span><span class=si>}</span><span class=s2>.log&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>MAX_LOG_SIZE</span><span class=o>=</span><span class=m>1048576</span>    <span class=c1># Max log size: 1MB (1048576 bytes)</span>
+</span></span><span class=line><span class=cl><span class=nv>LOG_BACKUP_COUNT</span><span class=o>=</span><span class=m>4</span>      <span class=c1># Number of rotated log files to keep</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Functions</span>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Ensure log directory exists</span>
+</span></span><span class=line><span class=cl>ensure_log_dir<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> ! -d <span class=s2>&#34;</span><span class=nv>$LOG_DIR</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        mkdir -p <span class=s2>&#34;</span><span class=nv>$LOG_DIR</span><span class=s2>&#34;</span> 2&gt;/dev/null <span class=o>||</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;Error: Cannot create log directory: </span><span class=nv>$LOG_DIR</span><span class=s2>&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Logging function</span>
+</span></span><span class=line><span class=cl><span class=c1># Usage: log &#34;INFO&#34; &#34;Your message here&#34;</span>
+</span></span><span class=line><span class=cl><span class=c1>#        log &#34;ERROR&#34; &#34;Something went wrong&#34;</span>
+</span></span><span class=line><span class=cl><span class=c1>#        log &#34;WARN&#34; &#34;Warning message&#34;</span>
+</span></span><span class=line><span class=cl>log<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=nb>local</span> <span class=nv>level</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nb>local</span> <span class=nv>message</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$2</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nb>local</span> <span class=nv>timestamp</span><span class=o>=</span><span class=k>$(</span>date <span class=s1>&#39;+%Y-%m-%d %H:%M:%S&#39;</span> 2&gt;/dev/null <span class=o>||</span> <span class=nb>echo</span> <span class=s2>&#34;NO-DATE&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=c1># If logging is disabled, output to console only</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>ENABLE_LOGGING</span><span class=si>}</span><span class=s2>&#34;</span> !<span class=o>=</span> <span class=s2>&#34;true&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>[[</span> <span class=s2>&#34;</span><span class=nv>$level</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;ERROR&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [</span><span class=nv>$level</span><span class=s2>] : </span><span class=nv>$message</span><span class=s2>&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [</span><span class=nv>$level</span><span class=s2>] : </span><span class=nv>$message</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=c1># Logging is enabled, write to file (and console)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> ensure_log_dir 2&gt;/dev/null<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [</span><span class=nv>$level</span><span class=s2>] : </span><span class=nv>$message</span><span class=s2>&#34;</span> <span class=p>|</span> tee -a <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span> 2&gt;/dev/null <span class=o>||</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [</span><span class=nv>$level</span><span class=s2>] : </span><span class=nv>$message</span><span class=s2>&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        rotate_log_if_needed
+</span></span><span class=line><span class=cl>    <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=c1># Fallback to stderr if log file is unavailable</span>
+</span></span><span class=line><span class=cl>        <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [</span><span class=nv>$level</span><span class=s2>] : </span><span class=nv>$message</span><span class=s2>&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Log rotation function (runs automatically when log file exceeds MAX_LOG_SIZE)</span>
+</span></span><span class=line><span class=cl>rotate_log_if_needed<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> -f <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=nb>local</span> log_size
+</span></span><span class=line><span class=cl>        <span class=nb>local</span> <span class=nv>timestamp</span><span class=o>=</span><span class=k>$(</span>date <span class=s1>&#39;+%Y-%m-%d %H:%M:%S&#39;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>        <span class=nv>log_size</span><span class=o>=</span><span class=k>$(</span>wc -c &lt; <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>((</span> log_size &gt; MAX_LOG_SIZE <span class=o>))</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>            <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$timestamp</span><span class=s2> [INFO] : Log file exceeded </span><span class=nv>$MAX_LOG_SIZE</span><span class=s2> bytes, rotating logs.&#34;</span> &gt;&gt; <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>            
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=o>((</span> <span class=nv>i</span><span class=o>=</span>LOG_BACKUP_COUNT-1<span class=p>;</span> i&gt;0<span class=p>;</span> i-- <span class=o>))</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=o>[[</span> -f <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>.</span><span class=nv>$i</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>                    mv <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>.</span><span class=nv>$i</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>.</span><span class=k>$((</span>i+1<span class=k>))</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=k>fi</span>
+</span></span><span class=line><span class=cl>            <span class=k>done</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            mv <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>.1&#34;</span>
+</span></span><span class=line><span class=cl>            : &gt; <span class=s2>&#34;</span><span class=nv>$LOGFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Error handler (called automatically on script errors)</span>
+</span></span><span class=line><span class=cl>error_handler<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=nb>local</span> <span class=nv>exit_code</span><span class=o>=</span><span class=nv>$?</span>
+</span></span><span class=line><span class=cl>    <span class=nb>local</span> <span class=nv>line_no</span><span class=o>=</span><span class=nv>$1</span>
+</span></span><span class=line><span class=cl>    log <span class=s2>&#34;ERROR&#34;</span> <span class=s2>&#34;Script failed at line </span><span class=nv>$line_no</span><span class=s2> with exit code </span><span class=nv>$exit_code</span><span class=s2>.&#34;</span> 2&gt;/dev/null <span class=o>||</span> <span class=nb>true</span>
+</span></span><span class=line><span class=cl>    <span class=nb>exit</span> <span class=s2>&#34;</span><span class=nv>$exit_code</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Lockfile mechanism to prevent multiple instances</span>
+</span></span><span class=line><span class=cl>create_lockfile<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> -f <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=nb>local</span> old_pid
+</span></span><span class=line><span class=cl>        <span class=nv>old_pid</span><span class=o>=</span><span class=k>$(</span>cat <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span> 2&gt;/dev/null <span class=o>||</span> <span class=nb>echo</span> <span class=s2>&#34;&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>[[</span> -n <span class=s2>&#34;</span><span class=nv>$old_pid</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=nb>kill</span> -0 <span class=s2>&#34;</span><span class=nv>$old_pid</span><span class=s2>&#34;</span> 2&gt;/dev/null<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>            log <span class=s2>&#34;ERROR&#34;</span> <span class=s2>&#34;Another instance is already running (PID: </span><span class=nv>$old_pid</span><span class=s2>). Lockfile: </span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=nb>exit</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=c1># Stale lockfile detected, removing it</span>
+</span></span><span class=line><span class=cl>            rm -f <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>            log <span class=s2>&#34;INFO&#34;</span> <span class=s2>&#34;Removed stale lockfile at </span><span class=nv>$LOCKFILE</span><span class=s2>.&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$PID</span><span class=s2>&#34;</span> &gt; <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    log <span class=s2>&#34;INFO&#34;</span> <span class=s2>&#34;Created lockfile at </span><span class=nv>$LOCKFILE</span><span class=s2>.&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Clean up function (called automatically on exit)</span>
+</span></span><span class=line><span class=cl>cleanup<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CLEANUP_DONE</span><span class=k>:-</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=nb>export</span> <span class=nv>CLEANUP_DONE</span><span class=o>=</span><span class=m>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>[[</span> -f <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>            rm -f <span class=s2>&#34;</span><span class=nv>$LOCKFILE</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>            log <span class=s2>&#34;INFO&#34;</span> <span class=s2>&#34;Lockfile removed.&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    <span class=k>fi</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Check required commands (dependencies)</span>
+</span></span><span class=line><span class=cl><span class=c1># Uncomment and modify as needed:</span>
+</span></span><span class=line><span class=cl>check_dependencies<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Example: Check for required commands</span>
+</span></span><span class=line><span class=cl>    <span class=c1># local dependencies=(&#34;curl&#34; &#34;jq&#34; &#34;git&#34;)</span>
+</span></span><span class=line><span class=cl>    <span class=c1># for cmd in &#34;${dependencies[@]}&#34;; do</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#     if ! command -v &#34;$cmd&#34; &amp;&gt; /dev/null; then</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#         log &#34;ERROR&#34; &#34;Required command &#39;$cmd&#39; not found in PATH.&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#         exit 1</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#     fi</span>
+</span></span><span class=line><span class=cl>    <span class=c1># done</span>
+</span></span><span class=line><span class=cl>    :
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Main script logic - ADD YOUR CODE HERE</span>
+</span></span><span class=line><span class=cl>main<span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    log <span class=s2>&#34;INFO&#34;</span> <span class=s2>&#34;Starting </span><span class=nv>$SCRIPT_NAME</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># ========================================</span>
+</span></span><span class=line><span class=cl>    <span class=c1># TODO: Add your script logic here</span>
+</span></span><span class=line><span class=cl>    <span class=c1># ========================================</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Examples:</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#   log &#34;INFO&#34; &#34;Processing files...&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#   if some_condition; then</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#       log &#34;ERROR&#34; &#34;Something went wrong&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#       exit 1</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#   fi</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#   log &#34;INFO&#34; &#34;Done processing&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    log <span class=s2>&#34;INFO&#34;</span> <span class=s2>&#34;Completed successfully.&#34;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Optional: Root Check</span>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Uncomment the block below if your script requires root privileges</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># if [[ &#34;$EUID&#34; -ne 0 ]]; then</span>
+</span></span><span class=line><span class=cl><span class=c1>#     log &#34;ERROR&#34; &#34;This script must be run as root.&#34;</span>
+</span></span><span class=line><span class=cl><span class=c1>#     exit 1</span>
+</span></span><span class=line><span class=cl><span class=c1># fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># Signal handlers and execution</span>
+</span></span><span class=line><span class=cl><span class=c1># ============================================================================</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Set up error handler and cleanup on exit</span>
+</span></span><span class=line><span class=cl><span class=nb>trap</span> <span class=s1>&#39;error_handler $LINENO&#39;</span> ERR
+</span></span><span class=line><span class=cl><span class=nb>trap</span> <span class=s1>&#39;cleanup; exit&#39;</span> INT TERM EXIT
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Initialize and run</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[[</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>ENABLE_LOGGING</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>==</span> <span class=s2>&#34;true&#34;</span> <span class=o>]]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    ensure_log_dir
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>create_lockfile
+</span></span><span class=line><span class=cl>check_dependencies
+</span></span><span class=line><span class=cl>main
+</span></span><span class=line><span class=cl>cleanup
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Last updated on Oct 23, 2024 17:02 UTC</span></section></footer></article><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2025 killparty.github.io</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
